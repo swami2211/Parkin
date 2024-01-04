@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <link rel="stylesheet" href="static/css/style.css">
+  <style>
+    body {
+      background-image: url('static/assets/bg1.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 400px;
+      margin: 0 auto;
+      margin-top: 150px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
+    <label class="logo">SHPVIBE</label>
+    <ul>
+      <li><a href="/home">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/login" class="active">Login/Signup</a></li>
+      <li><a href="/model">Model</a></li>
+      <li><a href="/contact">contact</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h2>Login</h2>
+    <form>
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Your username.." required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Your password.." required>
+
+      <button type="submit" onclick="login()">Login</button>
+    </form><br>
+    <a href="/signup" class="new5">Register</a>
+  </div>
+
+  <script>
+    function login() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Add your login logic here
+      // ...
+
+      // Example: Display a welcome message
+      alert("Welcome, " + username + "!");
+    }
+  </script>
+</body>
+</html>
